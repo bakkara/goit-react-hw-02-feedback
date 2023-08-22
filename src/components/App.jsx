@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { FeedbackOptions } from "./FeedbackOptions/FeedbackOptions";
+import { Layout } from "./Layout";
 import { Notification } from "./Notification/Notification";
 import { Section } from "./Section/Section";
 import { Statistics } from "./Statistics/Statistics";
@@ -35,8 +36,8 @@ export class App extends Component {
     const options = Object.keys(this.state);
     const { good, neutral, bad } = this.state;
     
-        return(
-          <div>
+    return (
+          <Layout>
             <Section title="Please leave feedback">
               <FeedbackOptions options={options} onLeaveFeedback={this.onLeaveFeedback} />
             </Section>
@@ -49,7 +50,7 @@ export class App extends Component {
                 
               }
             </Section>
-      </div>
+      </Layout>
     );
     }
   };
