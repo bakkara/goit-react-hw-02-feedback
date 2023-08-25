@@ -50,7 +50,7 @@ export class App extends Component {
                 
               }
             </Section>
-      </Layout>
-    );
+     </Layout>
+    ); 
     }
   };
